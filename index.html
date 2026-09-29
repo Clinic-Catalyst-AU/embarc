@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>embarc | Your plan from Clinic Catalyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#00B4A0;--teal-lt:#00D4BC;--hero:#0A2A28;--dark:#0E2D2A;--gold:#D4A853;--red:#E84040;--paper:#f5f8f7;--line:#dbe6e3;--text:#1d2b29;--muted:#5a6d6a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--text);background:var(--paper);line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.12}
+h1,h2{font-weight:900;text-transform:uppercase;letter-spacing:.01em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.kicker{font-family:'Montserrat';font-weight:700;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--teal)}
+section{padding:90px 0}
+h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin:12px 0 18px}
+.lead{font-size:1.08rem;color:var(--muted);max-width:720px}
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:15px 28px;border-radius:8px;font-family:'Montserrat';font-weight:800;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:.3s;border:2px solid transparent}
+.btn-teal{background:var(--teal-lt);color:var(--hero)}
+.btn-teal:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.btn-ghost{border-color:rgba(0,212,188,.6);color:#dffcf7}
+.btn-ghost:hover{background:rgba(0,212,188,.12)}
+
+/* hero */
+.hero{position:relative;color:#eafaf7;background:var(--hero);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:url('https://assets.cdn.filesafe.space/nrnTN07xakan82JmlsuO/media/6b8775d4-7c48-4e51-ba81-26e0690cd1f5.webp') center/cover;opacity:.5}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(10,42,40,.55),rgba(10,42,40,.92) 75%)}
+.hero .wrap{position:relative;z-index:2;padding-top:40px;padding-bottom:100px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:80px;gap:16px;flex-wrap:wrap}
+.topbar img{height:30px;width:auto}
+.topbar .partner{height:54px;border-radius:6px}
+.topbar .x{font-family:'Montserrat';font-weight:800;color:var(--teal-lt);margin:0 14px}
+.brands{display:flex;align-items:center}
+.date{font-size:.85rem;color:#a9d8d0}
+.hero h1{font-size:clamp(2.3rem,5.6vw,4.4rem);max-width:900px}
+.hero h1 span{color:var(--teal-lt)}
+.hero p{font-size:1.15rem;max-width:640px;margin:24px 0 36px;color:#c9ebe5}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+/* heard */
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+.q{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:12px;padding:26px 26px 22px}
+.q p{font-style:italic;font-size:1.08rem}
+.q small{display:block;margin-top:10px;color:var(--muted);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-family:'Montserrat';font-weight:700}
+
+/* big idea */
+.idea{background:var(--dark);color:#e3f6f2}
+.idea .lead{color:#b5dcd5}
+.idea-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.idea img{border-radius:16px;height:460px;width:100%;object-fit:cover;object-position:center top}
+.idea ul{list-style:none;margin:24px 0 30px}
+.idea li{padding:12px 0 12px 34px;position:relative;border-bottom:1px solid rgba(0,212,188,.18)}
+.idea .lbl{color:var(--teal-lt);font-family:Montserrat,sans-serif;font-weight:700;font-size:.9rem}
+.idea li:before{content:"";position:absolute;left:0;top:19px;width:16px;height:3px;background:var(--teal-lt)}
+
+/* quick wins */
+.wins{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+.win{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.win .n{font-family:'Montserrat';font-weight:900;color:var(--teal);font-size:.9rem;letter-spacing:.14em}
+.win h3{font-size:1.2rem;margin:8px 0 10px}
+.win p{color:var(--muted);font-size:.96rem}
+.swaps{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.swaps h3{padding:24px 26px 6px;font-size:1.25rem}
+.swaps>p{padding:0 26px 16px;color:var(--muted);font-size:.95rem}
+.row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.row div{padding:16px 26px;font-size:.95rem}
+.row .from{color:var(--muted);background:#fafcfb}
+.row .to{font-weight:600}
+.row.head div{font-family:'Montserrat';font-weight:800;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);background:#fff}
+
+/* system */
+.system{background:#fff}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;counter-reset:s}
+.step{position:relative;padding:26px 20px;border:1px solid var(--line);background:var(--paper);text-align:center}
+.step:not(:last-child):after{content:"\2192";position:absolute;right:-13px;top:50%;transform:translateY(-50%);background:var(--teal-lt);color:var(--hero);width:26px;height:26px;border-radius:50%;font-weight:800;z-index:2;line-height:26px;font-size:.9rem}
+.step b{display:block;font-family:'Montserrat';font-weight:800;font-size:1rem;margin-bottom:6px}
+.step span{font-size:.88rem;color:var(--muted)}
+.pieces{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:50px}
+.piece{border:1px solid var(--line);border-radius:14px;padding:28px;background:var(--paper)}
+.piece h3{font-size:1.15rem;margin-bottom:8px}
+.piece p{color:var(--muted);font-size:.95rem}
+.piece .tag{display:inline-block;font-family:'Montserrat';font-weight:800;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--hero);background:var(--teal-lt);padding:4px 10px;border-radius:20px;margin-bottom:12px}
+.see{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.see .btn{background:var(--hero);color:#eafaf7}
+
+/* options */
+.options{background:var(--hero);color:#e3f6f2;position:relative;overflow:hidden}
+.options:before{content:"";position:absolute;inset:0;background:url('https://assets.cdn.filesafe.space/nrnTN07xakan82JmlsuO/media/d95e79bc-9c15-44d6-834b-8b5d973399b3.webp') center/cover;opacity:.25}
+.options .wrap{position:relative}
+.options .lead{color:#b5dcd5}
+.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+.opt{background:rgba(255,255,255,.97);color:var(--text);border-radius:18px;padding:36px 32px;display:flex;flex-direction:column}
+.opt.rec{outline:3px solid var(--teal-lt)}
+.opt .label{font-family:'Montserrat';font-weight:800;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+.opt h3{font-size:1.55rem;font-weight:900;text-transform:uppercase;margin:10px 0 12px}
+.opt>p{color:var(--muted)}
+.opt ul{list-style:none;margin:20px 0 24px}
+.opt li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line);font-size:.95rem}
+.opt li:before{content:"\2713";position:absolute;left:0;color:var(--teal);font-weight:800}
+.price{font-family:'Montserrat';font-weight:900;font-size:2.4rem;color:var(--hero);line-height:1}
+.price small{display:block;font-size:.78rem;font-weight:700;color:var(--muted);letter-spacing:.06em;margin-top:6px}
+.was{font-family:'Montserrat';font-weight:700;font-size:1rem;color:var(--muted);text-decoration:line-through;margin-bottom:6px}
+.abm{display:inline-block;align-self:flex-start;margin-top:12px;background:var(--gold);color:var(--hero);font-family:'Montserrat';font-weight:800;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:20px}
+.price-note{font-size:.9rem;color:var(--muted);margin:10px 0 22px}
+.opt .btn{margin-top:auto;justify-content:center}
+.opt .btn-dark{background:var(--hero);color:#eafaf7}
+.days{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0 6px}
+.day{background:var(--paper);border-radius:10px;padding:12px 14px;font-size:.86rem}
+.day b{display:block;font-family:'Montserrat';font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+
+.next{text-align:center}
+.next .lead{margin:0 auto 30px}
+footer{background:#061b19;color:#8fb8b1;text-align:center;padding:34px 20px;font-size:.85rem}
+footer img{height:26px;margin:0 auto 14px;width:auto}
+
+.reveal{opacity:0;transform:translateY(26px);transition:.9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:860px){
+  .quotes,.wins,.pieces,.opt-grid,.idea-grid{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr;gap:14px}
+  .step:after{display:none}
+  .idea img{height:380px}
+  .topbar{margin-bottom:50px}
+  section{padding:66px 0}
+}
+@media (max-width:520px){
+  .wrap{padding:0 18px}
+  .flow{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  .row .from{padding-bottom:6px}
+  .row .to{padding-top:6px}
+  .row.head{display:none}
+  .row .from:before{content:"Now: ";font-weight:600}
+  .row .to:before{content:"Try: ";color:var(--teal)}
+  .opt{padding:28px 22px}
+  .days{grid-template-columns:1fr}
+  .topbar .partner{height:44px}
+  .topbar img{height:22px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brands"><img src="assets/cc-logo.png" alt="Clinic Catalyst"><span class="x">&times;</span><span style="font-family:Georgia,serif;font-size:1.5rem;color:#fff;letter-spacing:.02em">embarc</span></div>
+      <div class="date">Prepared for Julia &middot; embarc sculpt &amp; restore &middot; September 2026</div>
+    </div>
+    <div class="kicker">Your plan</div>
+    <h1 class="reveal">People buy from <span>people</span></h1>
+    <p class="reveal">You've built a gorgeous space, with treatments people genuinely need and clients who rave about you. The next step is letting the world meet the warm, straight-talking women behind it, and bringing your marketing home so it runs on your terms.</p>
+    <div class="ctas reveal">
+      <a class="btn btn-teal" href="website.html">See your concept homepage</a>
+      <a class="btn btn-ghost" href="#options">How we install it</a>
+    </div>
+  </div>
+</header>
+
+<section id="heard">
+  <div class="wrap">
+    <div class="kicker">What we heard</div>
+    <h2 class="reveal">Where you are now</h2>
+    <div class="quotes">
+      <div class="q reveal"><p>A beautiful boutique clinic with EMSELLA, EMSCULPT and EXION, and a 5.0 Google rating.</p><small>What you've built</small></div>
+      <div class="q reveal"><p>A small team: you, a cosmetic nurse and one more team member, with bookings in Timely.</p><small>Your team</small></div>
+      <div class="q reveal"><p>An agency running your marketing, with no systems of your own underneath it.</p><small>Your marketing</small></div>
+      <div class="q reveal"><p>Open to bringing it in-house, as long as it's simple and done properly.</p><small>What you want</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="idea">
+  <div class="wrap idea-grid">
+    <div>
+      <div class="kicker">The big idea</div>
+      <h2 class="reveal">Clean and warm</h2>
+      <p class="lead reveal">Your site is beautifully clean, but it's mostly stock photos and machine names, so it could belong to any clinic. The way you spoke to us on the phone, warm and straight to the point, is exactly what your clients want. We keep the clean look and put you in it.</p>
+      <ul class="reveal">
+        <li><span class="lbl">You, front and centre:</span> your real space, your team, your voice</li>
+        <li><span class="lbl">Talk about the stuff nobody talks about:</span> leaking, post-baby tummies, menopause, said kindly and frankly</li>
+        <li><span class="lbl">Education that's fun to watch:</span> short videos that answer the questions people are too polite to ask</li>
+        <li><span class="lbl">Lead with the chair:</span> your clients already call EMSELLA "the magic chair", and that is your hero</li>
+      </ul>
+      <a class="btn btn-teal reveal" href="website.html">Open the concept homepage</a>
+    </div>
+    <img class="reveal" src="assets/lounge.webp" alt="The lounge at embarc" style="object-position:center">
+  </div>
+</section>
+
+<section id="wins">
+  <div class="wrap">
+    <div class="kicker">Quick wins for this week</div>
+    <h2 class="reveal">Things you can do now</h2>
+    <p class="lead reveal">Small changes that start working straight away.</p>
+    <div class="wins">
+      <div class="win reveal"><div class="n">01</div><h3>Swap the stock photos for your own</h3><p>You already have gorgeous photos of your space and a walk-through video. Put them on the homepage and treatment pages, and add a photo of you and the team. Clients want to see who they're about to meet.</p></div>
+      <div class="win reveal"><div class="n">02</div><h3>Write it the way you'd say it</h3><p>Read each page out loud. If you wouldn't say it to a client over a cuppa, rewrite it. "Leaking when you laugh?" works because it's how people actually talk.</p></div>
+      <div class="win reveal"><div class="n">03</div><h3>Add an honest-answers section</h3><p>Do I get undressed? Does it hurt? How many sessions? Answer the questions people are too shy to ask, in plain words, on the homepage.</p></div>
+      <div class="win reveal"><div class="n">04</div><h3>Put your Meta pixel to work</h3><p>Your pixel is already installed. Build audiences from your website visitors and video viewers, so everyone who has looked at EMSELLA sees your next story.</p></div>
+      <div class="win reveal"><div class="n">05</div><h3>Ask every happy client for a Google review</h3><p>You're on 5.0 from 19 reviews. An automatic thank-you text after each visit, with a direct link, turns that into a steady stream.</p></div>
+      <div class="win reveal"><div class="n">06</div><h3>Ask your agency for the logins</h3><p>Before anything changes, make sure you own your ad accounts, pixel, Google tag and audience data. That makes the move in-house painless whenever you're ready.</p></div>
+    </div>
+
+    <div class="swaps reveal">
+      <h3>Wording that stays inside the rules</h3>
+      <p>Device advertising has strict rules about results and statistics. A few lines from the current site, rewritten so they stay warm and stay compliant.</p>
+      <div class="row head"><div>Now</div><div>Try</div></div>
+      <div class="row"><div class="from">"Users reported a 95% improvement in stress urinary incontinence in 3 weeks"</div><div class="to">"Many people come to us for bladder leakage. Your nurse will talk you through whether EMSELLA suits you."</div></div>
+      <div class="row"><div class="from">"just one session of EMSCULPT is equivalent to an astonishing 20,000 crunches"</div><div class="to">"Powerful muscle contractions, far beyond what you can do on your own"</div></div>
+      <div class="row"><div class="from">"corrects pelvic floor prolapses ... boasting a 95% satisfaction rate"</div><div class="to">"A non-surgical option to discuss with our nurse if you're living with pelvic floor weakness"</div></div>
+      <div class="row"><div class="from">"Our team of body specialists"</div><div class="to">"Our team, led by a registered nurse"</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="system">
+  <div class="wrap">
+    <div class="kicker">The system</div>
+    <h2 class="reveal">Your marketing, brought home</h2>
+    <p class="lead reveal">Everything your agency does, set up in your own accounts, running in your voice, with you in control.</p>
+    <div class="flow">
+      <div class="step reveal"><b>1. Seen</b><span>Warm, funny, honest videos of you and the team</span></div>
+      <div class="step reveal"><b>2. Asked</b><span>A consultation form tagged by what's on her mind</span></div>
+      <div class="step reveal"><b>3. Followed up</b><span>Warm messages in your voice until she's ready</span></div>
+      <div class="step reveal"><b>4. Booked</b><span>Straight into Timely, with reminders and a review request after</span></div>
+    </div>
+
+    <div class="pieces">
+      <div class="piece reveal"><span class="tag">Your voice</span><h3>A business brain that sounds like you</h3><p>We capture how you speak, your words and your humour, so every caption, email, text and reply sounds like Julia, not a template.</p></div>
+      <div class="piece reveal"><span class="tag">Follow-up</span><h3>Nobody gets forgotten</h3><p>Everyone who enquires gets a warm welcome, a short video, the honest answers and a friendly nudge to book, automatically.</p></div>
+      <div class="piece reveal"><span class="tag">After hours</span><h3>An assistant for the 9pm questions</h3><p>Where are you, do I get undressed, how do I book. Answered in your tone, day or night, with anything clinical passed to your nurse.</p></div>
+      <div class="piece reveal"><span class="tag">Ads</span><h3>Meta and Google, run by you</h3><p>Your own campaigns for EMSELLA, EMSCULPT and EXION, built with Alicia, using the pixel data you already have.</p></div>
+      <div class="piece reveal"><span class="tag">Content</span><h3>Film once, publish everywhere</h3><p>You film on your phone, and your system edits it, captions it and publishes it across your socials, website and ads.</p></div>
+      <div class="piece reveal"><span class="tag">Win-backs</span><h3>Bring past clients home</h3><p>Clients who finished a course or haven't been in for a while get a friendly check-in, not a hard sell.</p></div>
+    </div>
+    <div class="see reveal">
+      <a class="btn" href="website.html#honest">See the honest answers</a>
+      <a class="btn" href="website.html#talk">See "what we help with"</a>
+      <a class="btn" href="website.html#consult">Try the consultation form</a>
+    </div>
+  </div>
+</section>
+
+<section class="options" id="options">
+  <div class="wrap">
+    <div class="kicker">How we install it</div>
+    <h2 class="reveal">The workshop, plus us at your clinic</h2>
+    <p class="lead reveal">Everything is installed in your own accounts, so you own it. Add the on-site session and we'll help you get comfortable on camera, too.</p>
+    <div class="opt-grid">
+      <div class="opt rec reveal">
+        <div class="label">The workshop</div>
+        <h3>3-Day Brisbane Workshop</h3>
+        <p>Join ten clinics in Brisbane on 26 to 28 October and leave with your system running and your marketing in your own hands.</p>
+        <div class="days">
+          <div class="day"><b>Before you arrive</b>Your system set up and waiting</div>
+          <div class="day"><b>Day 1</b>Claude and your systems installed</div>
+          <div class="day"><b>Day 2</b>Your Meta campaign built</div>
+          <div class="day"><b>Day 3</b>Your Google campaign built</div>
+        </div>
+        <ul>
+          <li>30 days of support afterwards</li>
+          <li>Bring a team member for $500</li>
+        </ul>
+        <div class="was">$5,000 including GST</div>
+        <div class="price">$3,500<small>Including GST, plus 30 days of support with us</small></div>
+        <p class="abm">Aesthetic Business Masters attendee price</p>
+        <p class="price-note">A $550 deposit holds your seat and comes off the total.</p>
+        <a class="btn btn-teal" href="https://www.cliniccatalyst.com.au/checkout" target="_blank" rel="noopener">Secure your seat</a>
+      </div>
+      <div class="opt reveal">
+        <div class="label">Add on</div>
+        <h3>2-hour filming workshop at your clinic</h3>
+        <p>Kelly and Alicia come to embarc for a personal 2-hour session with you. We get you out of your head and comfortable on camera, film with a plan that matches your ads, website and socials, then show you your system editing and publishing it.</p>
+        <ul>
+          <li>Kelly and Alicia, both with you at embarc</li>
+          <li>Filming planned around your campaigns</li>
+          <li>Your system edits and publishes the footage</li>
+          <li>You learn exactly what to do with everything you film</li>
+        </ul>
+        <div class="was">Valued at $1,400</div>
+        <div class="price">$800<small>Add it to your workshop</small></div>
+        <p class="price-note">Both of us, on site with you at embarc.</p>
+        <a class="btn btn-dark" href="#next">Add this on</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next" id="next">
+  <div class="wrap">
+    <div class="kicker">Next step</div>
+    <h2 class="reveal">Let's bring it home</h2>
+    <p class="lead reveal">Secure your workshop seat with the $550 deposit, and tell us if you'd like the on-site filming session. Any questions, just call us. You know we love a chat.</p>
+    <a class="btn btn-teal reveal" href="https://www.cliniccatalyst.com.au/checkout" target="_blank" rel="noopener">Secure your seat</a>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/cc-logo.png" alt="Clinic Catalyst">
+  Prepared by Kelly Wotherspoon and Alicia Hagen, Clinic Catalyst. Concept materials for embarc sculpt &amp; restore only.
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
