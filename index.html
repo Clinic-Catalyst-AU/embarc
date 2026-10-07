@@ -114,6 +114,24 @@ h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin:12px 0 18px}
 .day{background:var(--paper);border-radius:10px;padding:12px 14px;font-size:.86rem}
 .day b{display:block;font-family:'Montserrat';font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
 
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
+.sc{background:rgba(255,255,255,.97);color:var(--text);border-radius:18px;padding:30px 28px;display:flex;gap:18px;align-items:flex-start}
+.sc-n{font-family:'Montserrat';font-weight:900;color:var(--teal);font-size:.95rem;letter-spacing:.14em;padding-top:4px}
+.sc h3{font-size:1.15rem;font-weight:900;text-transform:uppercase;margin-bottom:6px}
+.sc ul{list-style:none}
+.sc li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--line);font-size:.93rem}
+.sc li:last-child{border-bottom:0}
+.sc li:before{content:"\2713";position:absolute;left:0;color:var(--teal);font-weight:800}
+.notinc{margin-top:22px;border:1px solid rgba(0,212,188,.35);border-radius:14px;padding:22px 26px;background:rgba(10,42,40,.6)}
+.notinc h3{font-size:1rem;text-transform:uppercase;margin-bottom:6px;color:var(--teal-lt)}
+.notinc p{color:#c9ebe5;font-size:.95rem}
+.paybox{margin-top:30px;background:rgba(255,255,255,.97);color:var(--text);border-radius:18px;padding:34px 32px;outline:3px solid var(--teal-lt);display:flex;flex-direction:column;max-width:640px}
+.paybox .label{font-family:'Montserrat';font-weight:800;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.payrows{margin:22px 0 24px}
+.pr{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.pr b{font-family:'Montserrat';font-weight:800;white-space:nowrap}
+.pr.total{border-bottom:0;border-top:2px solid var(--hero);margin-top:4px;font-weight:700}
+.paybox .btn{align-self:flex-start}
 .next{text-align:center}
 .next .lead{margin:0 auto 30px}
 footer{background:#061b19;color:#8fb8b1;text-align:center;padding:34px 20px;font-size:.85rem}
@@ -123,7 +141,7 @@ footer img{height:26px;margin:0 auto 14px;width:auto}
 .reveal.in{opacity:1;transform:none}
 
 @media (max-width:860px){
-  .quotes,.wins,.pieces,.opt-grid,.idea-grid{grid-template-columns:1fr}
+  .quotes,.wins,.pieces,.opt-grid,.idea-grid,.scope{grid-template-columns:1fr}
   .flow{grid-template-columns:1fr 1fr;gap:14px}
   .step:after{display:none}
   .idea img{height:380px}
@@ -140,6 +158,8 @@ footer img{height:26px;margin:0 auto 14px;width:auto}
   .row .from:before{content:"Now: ";font-weight:600}
   .row .to:before{content:"Try: ";color:var(--teal)}
   .opt{padding:28px 22px}
+  .sc{padding:24px 20px;flex-direction:column;gap:6px}
+  .paybox{padding:28px 22px}
   .days{grid-template-columns:1fr}
   .topbar .partner{height:44px}
   .topbar img{height:22px}
@@ -152,14 +172,14 @@ footer img{height:26px;margin:0 auto 14px;width:auto}
   <div class="wrap">
     <div class="topbar">
       <div class="brands"><img src="assets/cc-logo.png" alt="Clinic Catalyst"><span class="x">&times;</span><span style="font-family:Georgia,serif;font-size:1.5rem;color:#fff;letter-spacing:.02em">embarc</span></div>
-      <div class="date">Prepared for Julia &middot; embarc sculpt &amp; restore &middot; September 2026</div>
+      <div class="date">Prepared for Julia &middot; embarc sculpt &amp; restore &middot; October 2026</div>
     </div>
     <div class="kicker">Your plan</div>
     <h1 class="reveal">People buy from <span>people</span></h1>
     <p class="reveal">You've built a gorgeous space, with treatments people genuinely need and clients who rave about you. The next step is letting the world meet the warm, straight-talking women behind it, and bringing your marketing home so it runs on your terms.</p>
     <div class="ctas reveal">
       <a class="btn btn-teal" href="website.html">See your concept homepage</a>
-      <a class="btn btn-ghost" href="#options">How we install it</a>
+      <a class="btn btn-ghost" href="#options">What's included</a>
     </div>
   </div>
 </header>
@@ -230,16 +250,16 @@ footer img{height:26px;margin:0 auto 14px;width:auto}
       <div class="step reveal"><b>1. Seen</b><span>Warm, funny, honest videos of you and the team</span></div>
       <div class="step reveal"><b>2. Asked</b><span>A consultation form tagged by what's on her mind</span></div>
       <div class="step reveal"><b>3. Followed up</b><span>Warm messages in your voice until she's ready</span></div>
-      <div class="step reveal"><b>4. Booked</b><span>Straight into Timely, with reminders and a review request after</span></div>
+      <div class="step reveal"><b>4. Booked</b><span>Straight into Timely, your booking system</span></div>
     </div>
 
     <div class="pieces">
       <div class="piece reveal"><span class="tag">Your voice</span><h3>A business brain that sounds like you</h3><p>We capture how you speak, your words and your humour, so every caption, email, text and reply sounds like Julia, not a template.</p></div>
       <div class="piece reveal"><span class="tag">Follow-up</span><h3>Nobody gets forgotten</h3><p>Everyone who enquires gets a warm welcome, a short video, the honest answers and a friendly nudge to book, automatically.</p></div>
-      <div class="piece reveal"><span class="tag">After hours</span><h3>An assistant for the 9pm questions</h3><p>Where are you, do I get undressed, how do I book. Answered in your tone, day or night, with anything clinical passed to your nurse.</p></div>
-      <div class="piece reveal"><span class="tag">Ads</span><h3>Meta and Google, run by you</h3><p>Your own campaigns for EMSELLA, EMSCULPT and EXION, built with Alicia, using the pixel data you already have.</p></div>
-      <div class="piece reveal"><span class="tag">Content</span><h3>Film once, publish everywhere</h3><p>You film on your phone, and your system edits it, captions it and publishes it across your socials, website and ads.</p></div>
-      <div class="piece reveal"><span class="tag">Win-backs</span><h3>Bring past clients home</h3><p>Clients who finished a course or haven't been in for a while get a friendly check-in, not a hard sell.</p></div>
+      <div class="piece reveal"><span class="tag">Ads</span><h3>Meta and Google, in your accounts</h3><p>One offer, one landing page, built with Alicia in your own ad accounts, using the pixel data you already have.</p></div>
+      <div class="piece reveal"><span class="tag">Content</span><h3>Filmed to a plan</h3><p>Your content team member films you to our scripts, so your ads, landing page and homepage all say the same thing, beautifully.</p></div>
+      <div class="piece reveal"><span class="tag">Always on</span><h3>One voice, everywhere</h3><p>Your conversational agents answer from the same core information as your website, ads and socials, so a new follower gets the same warm, honest answers wherever she asks. That builds trust fast, before she has even booked.</p></div>
+      <div class="piece reveal"><span class="tag">Your list</span><h3>Win-backs and your newsletter</h3><p>Your Mailchimp list comes into GHL. Past clients get a friendly check-in, not a hard sell, and everyone keeps hearing from you through your newsletter. One less subscription, too.</p></div>
     </div>
     <div class="see reveal">
       <a class="btn" href="website.html#honest">See the honest answers</a>
@@ -252,44 +272,92 @@ footer img{height:26px;margin:0 auto 14px;width:auto}
 <section class="options" id="options">
   <div class="wrap">
     <div class="kicker">How we install it</div>
-    <h2 class="reveal">The workshop, plus us at your clinic</h2>
-    <p class="lead reveal">Everything is installed in your own accounts, so you own it. Add the on-site session and we'll help you get comfortable on camera, too.</p>
-    <div class="opt-grid">
-      <div class="opt rec reveal">
-        <div class="label">The workshop</div>
-        <h3>3-Day Brisbane Workshop</h3>
-        <p>Join ten clinics in Brisbane on 26 to 28 October and leave with your system running and your marketing in your own hands.</p>
-        <div class="days">
-          <div class="day"><b>Before you arrive</b>Your system set up and waiting</div>
-          <div class="day"><b>Day 1</b>Claude and your systems installed</div>
-          <div class="day"><b>Day 2</b>Your Meta campaign built</div>
-          <div class="day"><b>Day 3</b>Your Google campaign built</div>
-        </div>
+    <h2 class="reveal">30 days with us, over Zoom</h2>
+    <p class="lead reveal">One offer, done properly, from the first ad to the booking. We build it with you over 30 days on Zoom, in your own accounts, so you own every piece of it. Here is exactly what is included.</p>
+
+    <div class="scope">
+      <div class="sc reveal">
+        <div class="sc-n">01</div>
+        <div><h3>Your front-end offer</h3>
         <ul>
-          <li>30 days of support afterwards</li>
-          <li>Bring a team member for $500</li>
-        </ul>
-        <div class="was">$5,000 including GST</div>
-        <div class="price">$3,500<small>Including GST, plus 30 days of support with us</small></div>
-        <p class="abm">Aesthetic Business Masters attendee price</p>
-        <p class="price-note">A $550 deposit holds your seat and comes off the total.</p>
-        <a class="btn btn-teal" href="https://www.cliniccatalyst.com.au/checkout" target="_blank" rel="noopener">Secure your seat</a>
+          <li>A Zoom session with Kelly and Alicia together to create ONE front-end offer</li>
+          <li>It starts with what your client is worried about, then shows how your treatment helps</li>
+          <li>The offer name, price, what is included and the wording, written for you</li>
+          <li>This same offer runs on Meta, Google, your landing page and your homepage, so every message matches</li>
+        </ul></div>
       </div>
-      <div class="opt reveal">
-        <div class="label">Add on</div>
-        <h3>2-hour filming workshop at your clinic</h3>
-        <p>Kelly and Alicia come to embarc for a personal 2-hour session with you. We get you out of your head and comfortable on camera, film with a plan that matches your ads, website and socials, then show you your system editing and publishing it.</p>
+      <div class="sc reveal">
+        <div class="sc-n">02</div>
+        <div><h3>Your filming plan</h3>
         <ul>
-          <li>Kelly and Alicia, both with you at embarc</li>
-          <li>Filming planned around your campaigns</li>
-          <li>Your system edits and publishes the footage</li>
-          <li>You learn exactly what to do with everything you film</li>
-        </ul>
-        <div class="was">Valued at $1,400</div>
-        <div class="price">$800<small>Add it to your workshop</small></div>
-        <p class="price-note">Both of us, on site with you at embarc.</p>
-        <a class="btn btn-dark" href="#next">Add this on</a>
+          <li>Once the offer is created, we write the scripts and shot list</li>
+          <li>Your content team member films you to our scripts: your ads, your landing page and your homepage</li>
+          <li>Filming starts as soon as the offer is created, so everything you film is on-message and good quality</li>
+          <li>Need a hand on the day? Kelly will jump on FaceTime and direct it with you</li>
+        </ul></div>
       </div>
+      <div class="sc reveal">
+        <div class="sc-n">03</div>
+        <div><h3>Your ads, Meta and Google (with Alicia)</h3>
+        <ul>
+          <li>One Meta campaign (Facebook and Instagram) for your offer, built in your own ad account</li>
+          <li>One Google Ads campaign for your offer, built in your own Google Ads account</li>
+          <li>Both campaigns send people to the same landing page</li>
+          <li>Your Meta pixel and Google tag set up to track enquiries, so you can see what each ad brings in</li>
+        </ul></div>
+      </div>
+      <div class="sc reveal">
+        <div class="sc-n">04</div>
+        <div><h3>Your website, hosted in your GHL</h3>
+        <ul>
+          <li>Your new homepage: the concept homepage we have already built, finished with your own photos and videos</li>
+          <li>ONE landing page for your offer, used by both your Meta and Google ads</li>
+          <li>Both pages live in your own GHL, connected to your domain</li>
+          <li>The enquiry form on both pages goes straight into your GHL</li>
+        </ul></div>
+      </div>
+      <div class="sc reveal">
+        <div class="sc-n">05</div>
+        <div><h3>Your systems (with Kelly)</h3>
+        <ul>
+          <li>Kelly's AIOS installed: Claude set up with your business brain, so captions, emails and replies sound like you</li>
+          <li>GHL set up as your one place for enquiries, contacts and follow-up</li>
+          <li>Form-submission follow-up: everyone who fills in your form gets warm emails and texts in your voice until they book</li>
+          <li>Your Mailchimp list brought into GHL, so all your contacts live in one place and you can cancel Mailchimp</li>
+          <li>Reactivation: a campaign to that list to bring past clients back</li>
+          <li>Your newsletter, running from GHL to the same list</li>
+          <li>Conversational agents that answer enquiries from the same core information as your website, landing page, ads and socials, so people who follow you but haven't booked yet get the same warm, consistent answers everywhere</li>
+        </ul></div>
+      </div>
+      <div class="sc reveal">
+        <div class="sc-n">06</div>
+        <div><h3>How the 30 days run</h3>
+        <ul>
+          <li>All on Zoom, at times that suit your clinic</li>
+          <li>Kelly and Alicia together for your offer session, then we split: Alicia on your ads, Kelly on your systems</li>
+          <li>Everything is built in your own accounts, so you own it all</li>
+        </ul></div>
+      </div>
+    </div>
+
+    <div class="notinc reveal">
+      <h3>Paid separately, straight to the provider</h3>
+      <p>Your ad spend on Meta and Google, your GHL subscription and your Claude subscription. Timely stays as your booking system.</p>
+    </div>
+
+    <div class="paybox reveal">
+      <div class="paytop">
+        <div><div class="label">Your investment</div><div class="price">$5,000<small>Paid in five parts over about two months</small></div></div>
+      </div>
+      <div class="payrows">
+        <div class="pr"><span>When you sign on</span><b>$500</b></div>
+        <div class="pr"><span>When your offer session with us is booked</span><b>$750</b></div>
+        <div class="pr"><span>14 days later</span><b>$1,250</b></div>
+        <div class="pr"><span>14 days after that</span><b>$1,250</b></div>
+        <div class="pr"><span>14 days after that</span><b>$1,250</b></div>
+        <div class="pr total"><span>Total</span><b>$5,000</b></div>
+      </div>
+      <a class="btn btn-teal" href="https://link.fastpaydirect.com/payment-link/6aa0e2f3e9a073174b3b555c" target="_blank" rel="noopener">Pay my $500 sign-on</a>
     </div>
   </div>
 </section>
@@ -298,8 +366,8 @@ footer img{height:26px;margin:0 auto 14px;width:auto}
   <div class="wrap">
     <div class="kicker">Next step</div>
     <h2 class="reveal">Let's bring it home</h2>
-    <p class="lead reveal">Secure your workshop seat with the $550 deposit, and tell us if you'd like the on-site filming session. Any questions, just call us. You know we love a chat.</p>
-    <a class="btn btn-teal reveal" href="https://www.cliniccatalyst.com.au/checkout" target="_blank" rel="noopener">Secure your seat</a>
+    <p class="lead reveal">Pay your $500 sign-on and we'll book your offer session with the two of us. Any questions, just call us. You know we love a chat.</p>
+    <a class="btn btn-teal reveal" href="https://link.fastpaydirect.com/payment-link/6aa0e2f3e9a073174b3b555c" target="_blank" rel="noopener">Pay my $500 sign-on</a>
   </div>
 </section>
 
